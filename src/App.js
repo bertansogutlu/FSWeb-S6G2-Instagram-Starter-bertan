@@ -21,6 +21,8 @@ const App = () => {
 	const [gonderiler, setGonderiler] = useState(sahteVeri);
   const [aramaKriteri, setAramaKriteri] = useState(null);
   const gonderiyiBegen = gonderiID => {
+    gonderiler.find(e => e.id == gonderiID).likes += 1;
+    setGonderiler([...sahteVeri]);
     /*
       Bu fonksiyon, belirli bir id ile gönderinin beğeni sayısını bir artırma amacına hizmet eder.
 
@@ -32,7 +34,6 @@ const App = () => {
         - gönderinin idsi "gonderiID" ile eşleşirse, istenen değerlerle yeni bir gönderi nesnesi döndürün.
         - aksi takdirde, sadece gönderi nesnesini değiştirmeden döndürün.
      */
-    gonderiler.find(e => e.id == gonderiID).likes += 1;
   };
 
   return (
