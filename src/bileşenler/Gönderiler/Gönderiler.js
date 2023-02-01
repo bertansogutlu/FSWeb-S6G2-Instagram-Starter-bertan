@@ -9,7 +9,7 @@ const Gönderiler = (props) => {
   return (
     <div className='posts-container-wrapper'>
       {gonderiler.map(element => {
-        <Gönderi gonderi = {element} gonderiyiBegen = {gonderiyiBegen}/>
+        <Gönderi gönderi = {element} gönderiyiBegen = {gonderiyiBegen}/>
       })}
       {/* Gönderi'nin çağırılmasında hangi propları kullanmanız gerektiğine dikkat edin! */}
     </div>
